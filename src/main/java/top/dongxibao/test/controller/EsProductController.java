@@ -63,7 +63,7 @@ public class EsProductController {
 		return ResponseEntity.ok(result);
 	}
 
-	@ApiOperation(value = "新增或修改ES产品", notes = "")
+	@ApiOperation(value = "新增或修改ES产品", notes = "有id为修改，没有为新增")
 	@PostMapping("save")
 	public ResponseEntity<EsProduct> save(@RequestBody EsProduct esProduct) {
 		EsProduct result = esProductService.save(esProduct);
